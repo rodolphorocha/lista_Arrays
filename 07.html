@@ -10,10 +10,21 @@
     //NÃO FOI DESSA VEZ... TENTE NOVAMENTE!
 
     //ENTRADA
-
+    const cores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+    const numeros = Math.floor(Math.random() * 7);
+    const corSorteada = cores[numeros]
+    const cor = (prompt(`adicione uma cor, as cores disponíveis são: ${cores.join(", ")}`));
+     
 
     //PROCESSAMENTO
+    document.write(`A cor sorteada foi ${corSorteada}<br>`);
+    document.write(`Você escolheu essa cor: ${cor}<br>`)
 
+    if (cor === corSorteada){
+        document.write(`Parabéns! Você está com sorte na ${corSorteada}!`)
+    } else{
+        document.write(`Não foi dessa vez...Tente novamente!`)
+    }
 
     //SAÍDA
 
