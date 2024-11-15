@@ -7,19 +7,26 @@
 
     //ENTRADA
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    const carro = prompt(`Informe qual carro deseja remover da lista? \n-${carrosSUV.join("\n-")}.`).toLowerCase();
-
-
-
+    const listaAntiga = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    const remover = prompt (`Qual carro você deseja remover da lista? (A primeira letra deve ser maiúscula) \n-${carrosSUV.join("\n-")}`);
 
     //PROCESSAMENTO
-    const posicao = carrosSUV.indexOf(carro);
-    alert(posicao)
-    if (posicao >= 0) {
-        
+    if (remover == "Tiggo") {
+        carrosSUV.splice (0,1);
     }
-
-
+    else if (remover == "Sportage") {
+        carrosSUV.splice (1,1);
+    }
+    else if (remover == "Tucson") {
+        carrosSUV.splice (2,1);
+    }
+    else if (remover == "EcoSport") {
+        carrosSUV.splice (3,1);
+    }
+    else {
+        document.write (`Valor inválido`);
+    }
     //SAÍDA
-
+    document.write(`A antiga lista é: ${listaAntiga} <br>`)
+    document.write(`A lista atualizada, após a remoção, será: ${carrosSUV}.`)
 </script>
