@@ -6,11 +6,17 @@
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
     //ENTRADA
-
+    const palavra = prompt(`digite uma palavra`);
+    const letra = prompt(`digite a letra que você deseja na palavra que escolheu`);
 
     //PROCESSAMENTO
+    const acharLetra = palavra.indexOf(letra);
 
-
+    if(acharLetra != -1){
+        document.write(`A letra que você escolheu existe e está na posição ${acharLetra}`)
+    } else{
+        document.write(`A letra escolhida não está na palavra`)
+    }
     //SAÍDA
-
+    
 </script>
